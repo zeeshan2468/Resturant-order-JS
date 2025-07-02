@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Restaurant Order</title>
+</head>
+<body>
+
+<script>
+  alert("Welcome dear customer!");
+  let food = prompt(
+    "What would you like to order?\n" +
+    "1. Biryani (Enter 1)\n" +
+    "2. Pasta (Enter 5)\n" +
+    "3. Pulao (Enter 10)\n" +
+    "4. Macaroni (Enter 99)"
+  );
+
+  let orderName = "";
+  let dishType = "";
+  let plate = "";
+  let price = 0;
+
+  if (food == 1) {
+    orderName = "Biryani";
+    let type = prompt("Choose Biryani type:\n1. Chicken\n2. Beef\n3. Mutton");
+
+    if (type == 1) {
+      dishType = "Chicken";
+    } else if (type == 2) {
+      dishType = "Beef";
+    } else if (type == 3) {
+      dishType = "Mutton";
+    } else {
+      alert("Invalid type selected.");
+    }
+
+    let plateType = prompt("Choose Plate:\n45. Single Plate\n75. Double Plate");
+
+    if (plateType == 45) {
+      plate = "Single Plate";
+      price = 45;
+    } else if (plateType == 75) {
+      plate = "Double Plate";
+      price = 75;
+    } else {
+      alert("Invalid plate selected.");
+    }
+
+  } else if (food == 5) {
+    orderName = "Pasta";
+    let type = prompt(
+      "Choose Pasta flavor:\n" +
+      "1. White Sauce\n" +
+      "2. Red Sauce\n" +
+      "3. Pink Sauce\n" +
+      "4. Cheese Loaded"
+    );
+
+    if (type == 1) {
+      dishType = "White Sauce";
+    } else if (type == 2) {
+      dishType = "Red Sauce";
+    } else if (type == 3) {
+      dishType = "Pink Sauce";
+    } else if (type == 4) {
+      dishType = "Cheese Loaded";
+    } else {
+      alert("Invalid type selected.");
+    }
+
+    let plateType = prompt("Choose Plate:\n50. Single Plate\n90. Double Plate");
+
+    if (plateType == 50) {
+      plate = "Single Plate";
+      price = 50;
+    } else if (plateType == 90) {
+      plate = "Double Plate";
+      price = 90;
+    } else {
+      alert("Invalid plate selected.");
+    }
+
+  } else if (food == 10) {
+    orderName = "Pulao";
+    let type = prompt(
+      "Choose Pulao type:\n" +
+      "1. Chicken\n2. Beef\n3. Mutton"
+    );
+
+    if (type == 1) {
+      dishType = "Chicken";
+    } else if (type == 2) {
+      dishType = "Beef";
+    } else if (type == 3) {
+      dishType = "Mutton";
+    } else {
+      alert("Invalid type selected.");
+    }
+
+    let plateType = prompt("Choose Plate:\n40. Single Plate\n70. Double Plate");
+
+    if (plateType == 40) {
+      plate = "Single Plate";
+      price = 40;
+    } else if (plateType == 70) {
+      plate = "Double Plate";
+      price = 70;
+    } else {
+      alert("Invalid plate selected.");
+    }
+
+  } else if (food == 99) {
+    orderName = "Macaroni";
+    let type = prompt(
+      "Choose Macaroni flavor:\n" +
+      "1. Spicy\n2. Mild\n3. Cheesy\n4. Vegetable"
+    );
+
+    if (type == 1) {
+      dishType = "Spicy";
+    } else if (type == 2) {
+      dishType = "Mild";
+    } else if (type == 3) {
+      dishType = "Cheesy";
+    } else if (type == 4) {
+      dishType = "Vegetable";
+    } else {
+      alert("Invalid type selected.");
+    }
+
+    let plateType = prompt("Choose Plate:\n60. Single Plate\n100. Double Plate");
+
+    if (plateType == 60) {
+      plate = "Single Plate";
+      price = 60;
+    } else if (plateType == 100) {
+      plate = "Double Plate";
+      price = 100;
+    } else {
+      alert("Invalid plate selected.");
+    }
+
+  } else {
+    alert("Invalid food selection.");
+  }
+
+  // Show order summary and ask for payment
+  if (orderName && dishType && plate && price > 0) {
+    alert("Your order is: " + dishType + " " + orderName + " - " + plate + "\nTotal Bill: " + price + " PKR");
+
+    let payment = prompt("How would you like to pay?\n1. Cash\n2. Online");
+
+    if (payment == 1) {
+      alert("Please submit the cash to the counter after your meal. Thank you!");
+    } else if (payment == 2) {
+      alert("Dear customer, your payment has been received. Thanks for visiting us!");
+    } else {
+      alert("Invalid payment option.");
+    }
+  }
+</script>
+
+</body>
+</html>
